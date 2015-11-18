@@ -16,7 +16,7 @@ describe('Email', () => {
   })
 
   it('suggests one valid choice', () => {
-    parser.sentences = [<Email />]
+    parser.grammar = <Email />
 
     const data = from(parser.parse('test@test.com'))
     expect(data).to.have.length(1)
