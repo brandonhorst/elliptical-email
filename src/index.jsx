@@ -10,14 +10,14 @@ export default class Email extends Phrase {
     return /^[\d\w_+.@-]*$/.test(input)
   }
 
-  validate (input) {
+  filter (input) {
     return /^[\d\w_+.-]+@[\d\w_.-]{1,63}\.\w{2,63}$/.test(input)
   }
 
   describe() {
     return (
       <argument text='email address' displayWhen={this.displayWhen}>
-        <freetext validate={this.validate} />
+        <freetext validate={this.filter} />
       </argument>
     )
   }

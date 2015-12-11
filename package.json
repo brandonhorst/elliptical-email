@@ -33,12 +33,13 @@
   "homepage": "https://github.com/brandonhorst/lacona-phrase-email",
   "devDependencies": {
     "babel": "^5.1.9",
-    "chai": "^2.2.0",
-    "lacona": "^0.25.0",
-    "mocha": "^2.2.4",
-    "rimraf": "^2.3.2"
+    "chai": "^3.4.1",
+    "lacona": "^0.32.0",
+    "mocha": "^2.3.4",
+    "rimraf": "^2.4.4"
   },
   "dependencies": {
-    "lacona-phrase": "^0.7.0"
+    "lacona-phrase": "^0.7.0",
+    "lodash": "^3.10.1"
   }
 }
