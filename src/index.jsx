@@ -1,12 +1,12 @@
 /** @jsx createElement */
 import {createElement, Phrase} from 'lacona-phrase'
 
-export default class Email extends Phrase {
-  // getValue(result) {
-    // return `${result.firstPart}@${result.secondPart}.${result.thirdPart}`
-  // }
+export class Address extends Phrase {
+  static defaultProps = {
+    argument: 'email address'
+  }
 
-  displayWhen (input) {
+  suppressWhen (input) {
     return /^[\d\w_+.@-]*$/.test(input)
   }
 
@@ -16,9 +16,9 @@ export default class Email extends Phrase {
 
   describe() {
     return (
-      <argument text='email address' displayWhen={this.displayWhen}>
-        <freetext validate={this.filter} />
-      </argument>
+      <label text={this.props.argument} suppressWhen={this.suppressWhen}>
+        <freetext filter={this.filter} />
+      </label>
     )
   }
 }
