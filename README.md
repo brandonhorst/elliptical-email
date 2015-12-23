@@ -1,5 +1,7 @@
 # lacona-phrase-email
 
+[![Build Status](https://travis-ci.org/lacona/lacona-phrase-email.svg?branch=master)](https://travis-ci.org/lacona/lacona-phrase-email)
+
 Lacona Phrases for matching an email-related information
 
 ## Installation
