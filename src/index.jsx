@@ -1,7 +1,7 @@
 /** @jsx createElement */
 import {createElement, Phrase} from 'lacona-phrase'
 
-export class Address extends Phrase {
+export class EmailAddress extends Phrase {
   static defaultProps = {
     argument: 'email address'
   }

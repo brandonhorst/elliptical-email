@@ -15,7 +15,7 @@ npm install lacona-phrase-email
 ```js
 /** @jsx createElement */
 import { createElement, Phrase } from 'lacona-phrase'
-import { Address as EmailAddress } from 'lacona-phrase-email'
+import { EmailAddress } from 'lacona-phrase-email'
 import { Parser } from 'lacona'
 
 const parser = new Parser({
@@ -37,7 +37,7 @@ parser.parseArray('email app@lacona.io')
 
 ## Reference
 
-### `Address`
+### `EmailAddress`
 
 Matches standard user@domain.tld email addresses.
 
