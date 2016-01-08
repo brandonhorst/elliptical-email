@@ -2,7 +2,7 @@
 /* eslint-env mocha */
 import _ from 'lodash'
 import { createElement, Phrase } from 'lacona-phrase'
-import { Address } from '..'
+import { EmailAddress } from '..'
 import { expect } from 'chai'
 import { Parser } from 'lacona'
 
@@ -20,16 +20,17 @@ describe('Email', () => {
   })
 
   it('suggests one valid choice', () => {
-    parser.grammar = <Address />
+    parser.grammar = <EmailAddress />
 
     const data = from(parser.parse('test@test.com'))
     expect(data).to.have.length(1)
     expect(text(data[0])).to.equal('test@test.com')
     expect(data[0].result).to.equal('test@test.com')
+    expect(data[0].words[0].placeholder).to.be.undefined
   })
 
   it('suppresses for incomplete', () => {
-    parser.grammar = <Address />
+    parser.grammar = <EmailAddress />
 
     const data = from(parser.parse('test@tes'))
     expect(data).to.have.length(1)

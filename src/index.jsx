@@ -7,7 +7,7 @@ export class EmailAddress extends Phrase {
   }
 
   suppressWhen (input) {
-    return /^[\d\w_+.@-]*$/.test(input)
+    return /^[\d\w_+.-]+(|@[\d\w_-]{0,63}|@[\d\w_-]{1,63}\.\w?)$/.test(input)
   }
 
   filter (input) {
