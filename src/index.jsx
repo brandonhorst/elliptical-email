@@ -1,24 +1,25 @@
 /** @jsx createElement */
-import {createElement, Phrase} from 'lacona-phrase'
 
-export class EmailAddress extends Phrase {
-  static defaultProps = {
-    argument: 'email address'
-  }
+import {createElement} from 'elliptical'
 
-  suppressWhen (input) {
-    return /^[\d\w_+.-]+(|@[\d\w_-]{0,63}|@[\d\w_-]{1,63}\.\w?)$/.test(input)
-  }
-
-  filter (input) {
-    return /^[\d\w_+.-]+@[\d\w_.-]{1,63}\.\w{2,63}$/.test(input)
-  }
-
-  describe() {
-    return (
-      <label text={this.props.argument} suppressWhen={this.suppressWhen}>
-        <freetext filter={this.filter} />
-      </label>
-    )
-  }
+function suppressWhen (input) {
+  return /^[\d\w_+.-]+(|@[\d\w_-]{0,63}|@[\d\w_-]{1,63}\.\w?)$/.test(input)
 }
+
+function filter (input) {
+  return /^[\d\w_+.-]+@[\d\w_.-]{1,63}\.\w{2,63}$/.test(input)
+}
+
+const defaultProps = {
+  argument: 'email address'
+}
+
+function describe ({props}) {
+  return (
+    <label text={props.argument} suppressWhen={suppressWhen}>
+      <freetext filter={filter} />
+    </label>
+  )
+}
+
+export default {defaultProps, describe}
