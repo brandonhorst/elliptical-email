@@ -22,4 +22,4 @@ function describe ({props}) {
   )
 }
 
-export default {defaultProps, describe}
+export const EmailAddress = {defaultProps, describe}

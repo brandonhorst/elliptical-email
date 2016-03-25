@@ -3,7 +3,7 @@
 
 import _ from 'lodash'
 import {createElement, compile} from 'elliptical'
-import EmailAddress from '../src/index'
+import {EmailAddress} from '../src/index'
 import {expect} from 'chai'
 
 export function text(input) {
