@@ -1,6 +1,6 @@
 {
   "name": "elliptical-email",
-  "version": "1.0.0-rc2",
+  "version": "1.0.0-rc3",
   "description": "lacona phrase for matching an email address",
   "main": "lib/index.js",
   "directories": {
@@ -40,7 +40,7 @@
     "rimraf": "^2.5.2"
   },
   "dependencies": {
-    "elliptical": "^1.0.0-rc4"
+    "elliptical": "^1.0.0-rc16"
   },
   "babel": {
     "presets": [

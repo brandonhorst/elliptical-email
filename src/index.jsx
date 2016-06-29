@@ -16,9 +16,9 @@ const defaultProps = {
 
 function describe ({props}) {
   return (
-    <label text={props.argument} suppressWhen={suppressWhen}>
+    <placeholder text={props.argument} suppressWhen={suppressWhen}>
       <freetext filter={filter} />
-    </label>
+    </placeholder>
   )
 }
 
