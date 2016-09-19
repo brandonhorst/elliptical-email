@@ -25,4 +25,4 @@ function describe ({props}) {
   )
 }
 
-export const EmailAddress = {defaultProps, describe}
+export const EmailAddress = {defaultProps, describe, id: 'elliptical-email:EmailAddress'}
